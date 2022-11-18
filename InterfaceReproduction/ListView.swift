@@ -17,25 +17,22 @@ struct ListView: View {
     //MARK: Computed Properties
     var body: some View {
         
-        
-        List{
-            HStack{
-                Image(systemName: symbol1)
-                    .font(.largeTitle)
-                    .foregroundColor(.red)
-                    .background(Color.white)
-                Text(text)
-                    .font(.title2)
-                Image(systemName: symbol2)
-                    .font(.title3)
-                    .foregroundColor(.gray)
-                    .padding(.leading, 120)
-                    .bold()
-            }
-        }
-        
+        HStack{
+            Image(systemName: symbol1)
+                .font(.largeTitle)
+                .symbolRenderingMode(.multicolor)
+                .foregroundColor(.red)
+             Text(text)
+                .font(.title3)
+            Image(systemName: symbol2)
+                .font(.title3)
+                .foregroundColor(.gray)
+                .padding(.leading, 120)
+                .bold()
+        }.bold()
     }
 }
+
 
 
 

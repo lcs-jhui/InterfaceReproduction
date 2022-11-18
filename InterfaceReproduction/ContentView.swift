@@ -13,7 +13,7 @@ struct ContentView: View {
         
         ZStack{
             
-            ScrollView{
+            VStack{
                 
                 
                 VStack(spacing: 20){
@@ -31,7 +31,7 @@ struct ContentView: View {
                     VStack{
                         Image("WatchFace")
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .frame(width: 150)
                         
                         Text("Infograph")
@@ -42,12 +42,13 @@ struct ContentView: View {
                 }
                 
                 List{
-                        ListView(symbol1: "bell.badge.circle", text: "Notifications", symbol2: "chevron.forward")
+                        ListView(symbol1: "bell.badge.circle.fill", text: "Notifications", symbol2: "chevron.forward")
                     }
         
                 
             }
-            .navigationTitle("Russell's Apple Watch").bold()
+            .navigationTitle("Russell's Apple Watch")
+            .bold()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {}) {
