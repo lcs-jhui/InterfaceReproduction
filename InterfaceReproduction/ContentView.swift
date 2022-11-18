@@ -27,19 +27,24 @@ struct ContentView: View {
                             .font(.title3)
                             .foregroundColor(.orange)
                     }
-                    Image("WatchFace")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50,height: 50)
                     
-                    
+                    VStack{
+                        Image("WatchFace")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150)
+                        
+                        Text("Infograph")
+
+                        
+                    }.padding(.trailing, 230)
                     
                 }
                 
-                
-                
-                
-                
+                List{
+                        ListView(symbol1: "bell.badge.circle", text: "Notifications", symbol2: "chevron.forward")
+                    }
+        
                 
             }
             .navigationTitle("Russell's Apple Watch").bold()
