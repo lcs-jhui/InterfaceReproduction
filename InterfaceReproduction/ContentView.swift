@@ -35,16 +35,35 @@ struct ContentView: View {
                             .frame(width: 150)
                         
                         Text("Infograph")
-
+                        
                         
                     }.padding(.trailing, 230)
                     
                 }
                 
                 List{
-                        ListView(symbol1: "bell.badge.circle.fill", text: "Notifications", symbol2: "chevron.forward")
-                    }
-        
+                    
+                    NavigationLink(destination: {
+                        FalsePage()
+                    }, label: {
+                        ListView(symbol1: "bell.badge.circle.fill", text: "Notifications", color: .red)
+                    })
+                    
+                    NavigationLink(destination: {
+                        FalsePage()
+                    }, label: {
+                        ListView(symbol1: "circle.hexagongrid.circle.fill", text: "App View", color: .blue)
+                    })
+                    
+                    NavigationLink(destination: {
+                        FalsePage()
+                    }, label: {
+                        ListView(symbol1: "circle.hexagongrid.circle.fill", text: "App View", color: .blue)
+                    })
+                    
+                    
+                }
+                
                 
             }
             .navigationTitle("Russell's Apple Watch")

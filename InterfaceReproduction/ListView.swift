@@ -12,7 +12,7 @@ struct ListView: View {
     //MARK: Stored Properties
     var symbol1: String
     var text: String
-    var symbol2: String
+    var color: Color
     
     //MARK: Computed Properties
     var body: some View {
@@ -21,15 +21,11 @@ struct ListView: View {
             Image(systemName: symbol1)
                 .font(.largeTitle)
                 .symbolRenderingMode(.multicolor)
-                .foregroundColor(.red)
+                .foregroundColor(color)
              Text(text)
                 .font(.title3)
-            Image(systemName: symbol2)
-                .font(.title3)
-                .foregroundColor(.gray)
-                .padding(.leading, 120)
-                .bold()
-        }.bold()
+        }
+        .bold()
     }
 }
 
@@ -38,7 +34,7 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(symbol1: "bell.badge.circle.fill", text: "Notifications", symbol2: "chevron.forward")
+        ListView(symbol1: "bell.badge.circle.fill", text: "Notifications", color: .red)
             .preferredColorScheme(.dark)
     }
 }
