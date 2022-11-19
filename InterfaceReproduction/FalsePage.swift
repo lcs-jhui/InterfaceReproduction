@@ -9,7 +9,11 @@ import SwiftUI
 
 struct FalsePage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Nothing to see here")
+            .bold()
+            .font(.largeTitle)
+        Image(systemName: "face.smiling.inverse")
+            .font(.largeTitle)
     }
 }
 
